@@ -521,8 +521,9 @@ function addNavigatorButtons(screen, sideMenuParams) {
   }
 
   // Get image uri from image id
-  const rightButtons = getRightButtons(screen);
+  let rightButtons = getRightButtons(screen);
   if (rightButtons) {
+    rightButtons = JSON.parse(JSON.stringify(getRightButtons(screen)));
     rightButtons.forEach(function(button) {
       button.enabled = !button.disabled;
       if (button.icon) {
