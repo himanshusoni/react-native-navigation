@@ -438,6 +438,13 @@ public class BottomTabsLayout extends BaseLayout implements AHBottomNavigation.O
         slidingOverlaysQueue.destroy();
     }
 
+    /**
+    * Called when a tab has been selected (clicked)
+    *
+    * @param position    int: Position of the selected tab
+    * @param wasSelected boolean: true if the tab was already selected
+    * @return boolean: true for updating the tab UI, false otherwise
+    */
     @Override
     public boolean onTabSelected(int position, boolean wasSelected) {
         if (wasSelected) {
